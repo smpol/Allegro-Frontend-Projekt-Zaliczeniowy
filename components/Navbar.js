@@ -9,6 +9,7 @@ import {
   FaTasks,
   FaEnvelope,
 } from "react-icons/fa";
+import { LuListTodo } from "react-icons/lu";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,12 @@ export default function Navbar() {
   return (
     <nav className="bg-blue-600 dark:bg-blue-900 p-4 shadow-md fixed top-0 left-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" legacyBehavior>
-          <a className="text-white text-xl font-bold">Todo List App</a>
-        </Link>
+        <div className="flex items-center space-x-4">
+          <LuListTodo className="text-white text-2xl" />
+          <Link href="/" legacyBehavior>
+            <a className="text-white text-xl font-bold">Todo List App</a>
+          </Link>
+        </div>
         <div className="hidden md:flex space-x-4">
           <Link href="/" legacyBehavior>
             <a className="flex items-center text-white hover:text-gray-200">
