@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,18 +13,16 @@ export default function Home() {
           A simple and efficient way to manage your daily tasks.
         </p>
         <div className="flex space-x-4">
-          <a
-            href="/todos"
-            className="bg-blue-600 dark:bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-500"
-          >
-            Get Started
-          </a>
-          <a
-            href="/about"
-            className="bg-gray-300 text-gray-800  px-6 py-3 rounded-lg shadow hover:bg-gray-400"
-          >
-            Learn More
-          </a>
+          <Link href="/todos" legacyBehavior>
+            <a className="bg-blue-600 dark:bg-blue-900 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-500">
+              Get Started
+            </a>
+          </Link>
+          <Link href="/about" legacyBehavior>
+            <a className="bg-gray-300 text-gray-800  px-6 py-3 rounded-lg shadow hover:bg-gray-400">
+              Learn More
+            </a>
+          </Link>
         </div>
       </main>
     </>
