@@ -6,8 +6,12 @@ export default function AddTodoModal({ isOpen, onClose, onAdd }) {
   const [description, setDescription] = useState("");
 
   const handleAdd = () => {
-    if (title.trim() && description.trim()) {
-      onAdd({ title, description });
+    if (title.trim()) {
+      if (!description.trim()) {
+        onAdd({ title, description: "No description set" });
+      } else {
+        onAdd({ title, description });
+      }
       setTitle("");
       setDescription("");
       onClose();
