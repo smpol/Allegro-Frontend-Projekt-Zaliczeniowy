@@ -21,3 +21,7 @@ Prosta aplikacja która zawiera:
 # Sposób uruchomienia projektu:
 
 Należy sklonować repozytorium, wykonać polecenie `npm install` a następnie `npm run dev`
+
+## Live Preview
+
+Poprzez [Github Pages](https://smpol.github.io/Allegro-Frontend-Projekt-Zaliczeniowy/)
